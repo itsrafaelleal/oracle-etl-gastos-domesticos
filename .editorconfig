@@ -1,0 +1,32 @@
+# EditorConfig ajuda a manter estilos de codigo consistentes entre
+# diferentes editores e IDEs. https://editorconfig.org
+root = true
+
+# Padrao para todos os arquivos.
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# SQL e PL/SQL do pipeline.
+[*.sql]
+indent_size = 4
+
+# Python (gerador de dados sinteticos e utilitarios).
+[*.py]
+indent_size = 4
+
+# Arquivos de configuracao e documentacao usam 2 espacos.
+[*.{yml,yaml,json,md}]
+indent_size = 2
+
+# Makefile exige tabs reais nas receitas.
+[Makefile]
+indent_style = tab
+
+# Nao mexer em fim de linha de arquivos .env de exemplo.
+[*.env*]
+trim_trailing_whitespace = false
