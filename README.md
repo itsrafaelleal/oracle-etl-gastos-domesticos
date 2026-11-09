@@ -5,6 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Power BI](https://img.shields.io/badge/Power_BI-Semantic_Model-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![CI](https://github.com/itsrafaelleal/oracle-etl-gastos-domesticos/actions/workflows/ci.yml/badge.svg)](https://github.com/itsrafaelleal/oracle-etl-gastos-domesticos/actions/workflows/ci.yml)
 
 > **Projeto de Engenharia de Dados de ponta a ponta:** Migração arquitetural completa de uma solução legada em Python/Pandas/SQLite para um pipeline ETL robusto, governado e auditável, com 100% das transformações e regras de negócio processadas no **Oracle Database 23ai** via **SQL orientado a conjuntos e packages PL/SQL**.
 
@@ -239,6 +240,16 @@ oracle-etl-gastos-domesticos/
    - `VW_BI_DIM_CLASSIFICACAO`
    - `VW_BI_FATO_MOVIMENTACOES`
 5. Copie as fórmulas prontas do arquivo [`powerbi/dax_measures.dax`](powerbi/dax_measures.dax) para criar as métricas de Inteligência Temporal, Curva de Pareto e Ticket Médio.
+
+---
+
+## 🔄 Integração Contínua (CI)
+
+O repositório possui um workflow de GitHub Actions (`.github/workflows/ci.yml`) que roda em cada push e PR para a `main`:
+
+- **Guarda de dados reais:** falha o build se algum arquivo de dados financeiros (`.csv`, `.xlsx`, `.pbix`, `.dmp`, etc.) for versionado fora de `data/sample/`, reforçando automaticamente a política do `.gitignore` de nunca versionar dados reais.
+- **Guarda de segredos:** falha se o `.env` for versionado por engano.
+- **Smoke test:** valida a sintaxe do gerador de dados sintéticos no Python 3.12.
 
 ---
 
