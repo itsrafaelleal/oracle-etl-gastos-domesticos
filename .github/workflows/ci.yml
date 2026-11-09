@@ -1,0 +1,63 @@
+name: CI
+
+# Roda em pushes e PRs para a branch principal.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ------------------------------------------------------------------
+  # Guarda de seguranca: garante que NENHUM dado financeiro real foi
+  # versionado por engano. A unica excecao permitida e o dataset
+  # sintetico em data/sample/ (mesma regra do .gitignore do projeto).
+  # ------------------------------------------------------------------
+  guard-no-real-data:
+    name: Guarda - sem dados reais no repo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verificar que nao ha dados reais versionados
+        run: |
+          # Lista arquivos rastreados com extensoes de dados, ignorando data/sample/
+          ofensores=$(git ls-files \
+            '*.csv' '*.xlsx' '*.xls' '*.db' '*.sqlite' '*.dmp' '*.pbix' \
+            | grep -v '^data/sample/' || true)
+
+          if [ -n "$ofensores" ]; then
+            echo "::error::Arquivos de dados reais encontrados no repositorio:"
+            echo "$ofensores"
+            echo "Apenas data/sample/ pode conter dados (sinteticos)."
+            exit 1
+          fi
+          echo "OK: nenhum dado real versionado."
+
+      - name: Verificar que .env nao foi versionado
+        run: |
+          if git ls-files --error-unmatch .env >/dev/null 2>&1; then
+            echo "::error::.env com segredos foi versionado! Remova do controle de versao."
+            exit 1
+          fi
+          echo "OK: .env nao esta versionado."
+
+  # ------------------------------------------------------------------
+  # Smoke test do gerador de dados sinteticos. Usa apenas a stdlib,
+  # entao nao ha dependencias para instalar.
+  # ------------------------------------------------------------------
+  smoke-gerador:
+    name: Smoke - gerador de dados sinteticos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compilar o gerador (checagem de sintaxe)
+        run: python -m py_compile tools/gerador_dados_sinteticos/gerar_dataset.py
