@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------
+# SEGURANÇA: nenhum dado financeiro real entra neste repositório.
+# Por padrão, todo arquivo de dados é ignorado. Só o dataset
+# sintético em data/sample/ é versionado.
+# ------------------------------------------------------------------
+*.csv
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.dmp
+*.pbix
+!data/sample/**/*.csv
+
+
+# Inbox de execução (os arquivos são copiados para cá na hora da carga)
+data/inbox/*
+!data/inbox/.gitkeep
+
+# Saídas de runtime do Oracle (LOGFILE/BADFILE das external tables, spools)
+runtime/*
+!runtime/.gitkeep
+
+# Segredos
+.env
+*.env
+!.env.example
+wallet/
+*.p12
+*.sso
+
+# Python (usado somente no gerador de dados sintéticos)
+__pycache__/
+*.pyc
+.venv/
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+#arquivo
+arquivo.md

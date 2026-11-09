@@ -1,0 +1,97 @@
+// =====================================================================
+// PROJETO: Pipeline ETL Gastos Domésticos (Oracle SQL e PL/SQL)
+// ARQUIVO: powerbi/dax_measures.dax
+// OBJETIVO: Catálogo oficial de Métricas e Medidas DAX para o Power BI
+// =====================================================================
+
+// --- 1. MÉTRICAS BÁSICAS ---
+[Total Gasto] = 
+SUM(vw_bi_fato_movimentacoes[vl_movimentacao])
+
+[Total Lancamentos] = 
+COUNTROWS(vw_bi_fato_movimentacoes)
+
+[Ticket Medio] = 
+DIVIDE([Total Gasto], [Total Lancamentos], 0)
+
+// --- 2. INTELIGÊNCIA TEMPORAL (TIME INTELLIGENCE) ---
+// Baseado no relacionamento ativo com a Competência Orçamentária
+[Gasto Mes Anterior] = 
+CALCULATE(
+    [Total Gasto],
+    DATEADD(vw_bi_dim_calendario[dt_data], -1, MONTH)
+)
+
+[Variacao MoM Valor] = 
+[Total Gasto] - [Gasto Mes Anterior]
+
+[Variacao MoM %] = 
+DIVIDE([Variacao MoM Valor], [Gasto Mes Anterior], 0)
+
+[Gasto Ano Anterior] = 
+CALCULATE(
+    [Total Gasto],
+    SAMEPERIODLASTYEAR(vw_bi_dim_calendario[dt_data])
+)
+
+[Variacao YoY %] = 
+DIVIDE([Total Gasto] - [Gasto Ano Anterior], [Gasto Ano Anterior], 0)
+
+[Media Movel 3 Meses] = 
+AVERAGEX(
+    DATESINPERIOD(
+        vw_bi_dim_calendario[dt_data],
+        LASTDATE(vw_bi_dim_calendario[dt_data]),
+        -3,
+        MONTH
+    ),
+    [Total Gasto]
+)
+
+// --- 3. SEGMENTAÇÃO POR NATUREZA ORÇAMENTÁRIA ---
+[Gasto OPEX] = 
+CALCULATE(
+    [Total Gasto],
+    vw_bi_dim_classificacao[tp_natureza] = "OPEX"
+)
+
+[Gasto CAPEX] = 
+CALCULATE(
+    [Total Gasto],
+    vw_bi_dim_classificacao[tp_natureza] = "CAPEX"
+)
+
+[Gasto Nao Essencial] = 
+CALCULATE(
+    [Total Gasto],
+    vw_bi_dim_classificacao[tp_natureza] = "NAO_ESSENCIAL"
+)
+
+[Gasto Bem Estar] = 
+CALCULATE(
+    [Total Gasto],
+    vw_bi_dim_classificacao[tp_natureza] = "BEM_ESTAR"
+)
+
+// --- 4. PARTICIPAÇÃO E PARETO (%) ---
+[% Participacao no Total] = 
+DIVIDE(
+    [Total Gasto],
+    CALCULATE([Total Gasto], ALLSELECTED(vw_bi_dim_classificacao)),
+    0
+)
+
+[% Participacao no Responsavel] = 
+DIVIDE(
+    [Total Gasto],
+    CALCULATE([Total Gasto], ALLEXCEPT(vw_bi_dim_responsavel, vw_bi_dim_responsavel[nm_responsavel])),
+    0
+)
+
+// --- 5. ROLE-PLAYING DIMENSION (Visão por Data da Compra) ---
+// Ativa temporariamente a FK inativa de Data da Transação física
+[Gasto por Data da Compra] = 
+CALCULATE(
+    [Total Gasto],
+    USERELATIONSHIP(vw_bi_fato_movimentacoes[sk_data_transacao], vw_bi_dim_calendario[sk_data])
+)

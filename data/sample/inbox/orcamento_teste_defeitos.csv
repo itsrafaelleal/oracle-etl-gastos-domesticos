@@ -1,0 +1,159 @@
+id;data;competencia;responsavel;descricao;valor;categoria;subcategoria;tipo;observacao
+9001;01/06/2025;62025;Responsavel_A;Hortifruti Fresco;200,78;Alimentacao;Mercado;OPEX;
+9002;02/06/2025;62025;Responsavel_B;Mercado Central;230,32;Alimentacao;Mercado;OPEX;
+9003;03/06/2025;62025;Responsavel_B;Mercado Central;238,99;Alimentacao;Mercado;OPEX;
+9004;04/06/2025;62025;Responsavel_A;Atacadao Maxxi;158,29;Alimentacao;Mercado;OPEX;
+9005;05/06/2025;62025;Responsavel_A;Abastecimento Viagem;145,15;Transporte;Gasolina;OPEX;
+9006;06/06/2025;62025;Responsavel_A;Uber Corrida;48,74;Transporte;Aplicativo;NAO_ESSENCIAL;
+9007;07/06/2025;62025;Responsavel_B;Boutique do Cafe;15,00;Alimentacao;Cafeteria;NAO_ESSENCIAL;
+9008;08/06/2025;62025;Responsavel_B;Cafeteria Grao Nobre;31,88;Alimentacao;Cafeteria;NAO_ESSENCIAL;
+9009;09/06/2025;62025;Responsavel_B;ConectCar Rodovia;26,63;Transporte;Pedagio;OPEX;
+9010;10/06/2025;62025;Responsavel_B;Starbucks Centro;50,73;Alimentacao;Cafeteria;NAO_ESSENCIAL;
+9011;11/06/2025;62025;Responsavel_A;Pizzaria Bella;200,46;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9012;12/06/2025;62025;Responsavel_B;Pizzaria Bella;156,61;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9013;13/06/2025;62025;Responsavel_A;Condominio Edificio Solar;431,06;Moradia;Condominio;OPEX;
+9014;14/06/2025;62025;Responsavel_A;Netflix Assinatura;44,45;Lazer;Assinaturas;NAO_ESSENCIAL;
+9015;15/06/2025;62025;Responsavel_B;Posto Shell Combustiveis;183,58;Transporte;Gasolina;OPEX;
+9016;16/06/2025;62025;Responsavel_B;Teatro Municipal;86,46;Lazer;Entreterimento;NAO_ESSENCIAL;
+9017;17/06/2025;62025;Responsavel_A;Uber Corrida;46,05;Transporte;Aplicativo;NAO_ESSENCIAL;
+9018;18/06/2025;62025;Responsavel_A;Posto Ipiranga Centro;179,32;Transporte;Gasolina;OPEX;
+9019;19/06/2025;62025;Responsavel_A;Hortifruti Fresco;510,48;Alimentacao;Mercado;OPEX;
+9020;20/06/2025;62025;Responsavel_A;Presente Dia das Maes;87,65;Pessoal;Presentes;NAO_ESSENCIAL;
+9101;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 1;185,50;Transporte;Gasolina;OPEX;
+9102;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 2;185,50;Transporte;Gasolina;OPEX;
+9103;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 3;185,50;Transporte;Gasolina;OPEX;
+9104;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 4;185,50;Transporte;Gasolina;OPEX;
+9105;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 5;185,50;Transporte;Gasolina;OPEX;
+9106;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 6;185,50;Transporte;Gasolina;OPEX;
+9107;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 7;185,50;Transporte;Gasolina;OPEX;
+9108;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 8;185,50;Transporte;Gasolina;OPEX;
+9109;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 9;185,50;Transporte;Gasolina;OPEX;
+9110;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 10;185,50;Transporte;Gasolina;OPEX;
+9111;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 11;185,50;Transporte;Gasolina;OPEX;
+9112;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 12;185,50;Transporte;Gasolina;OPEX;
+9113;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 13;185,50;Transporte;Gasolina;OPEX;
+9114;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 14;185,50;Transporte;Gasolina;OPEX;
+9115;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 15;185,50;Transporte;Gasolina;OPEX;
+9116;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 16;185,50;Transporte;Gasolina;OPEX;
+9117;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 17;185,50;Transporte;Gasolina;OPEX;
+9118;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 18;185,50;Transporte;Gasolina;OPEX;
+9119;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 19;185,50;Transporte;Gasolina;OPEX;
+9120;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 20;185,50;Transporte;Gasolina;OPEX;
+9121;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 21;185,50;Transporte;Gasolina;OPEX;
+9122;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 22;185,50;Transporte;Gasolina;OPEX;
+9123;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 23;185,50;Transporte;Gasolina;OPEX;
+9124;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 24;185,50;Transporte;Gasolina;OPEX;
+9125;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 25;185,50;Transporte;Gasolina;OPEX;
+9126;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 26;185,50;Transporte;Gasolina;OPEX;
+9127;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 27;185,50;Transporte;Gasolina;OPEX;
+9128;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 28;185,50;Transporte;Gasolina;OPEX;
+9129;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 29;185,50;Transporte;Gasolina;OPEX;
+9130;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 30;185,50;Transporte;Gasolina;OPEX;
+9131;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 31;185,50;Transporte;Gasolina;OPEX;
+9132;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 32;185,50;Transporte;Gasolina;OPEX;
+9133;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 33;185,50;Transporte;Gasolina;OPEX;
+9134;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 34;185,50;Transporte;Gasolina;OPEX;
+9135;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 35;185,50;Transporte;Gasolina;OPEX;
+9136;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 36;185,50;Transporte;Gasolina;OPEX;
+9137;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 37;185,50;Transporte;Gasolina;OPEX;
+9138;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 38;185,50;Transporte;Gasolina;OPEX;
+9139;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 39;185,50;Transporte;Gasolina;OPEX;
+9140;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 40;185,50;Transporte;Gasolina;OPEX;
+9141;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 41;185,50;Transporte;Gasolina;OPEX;
+9142;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 42;185,50;Transporte;Gasolina;OPEX;
+9143;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 43;185,50;Transporte;Gasolina;OPEX;
+9144;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 44;185,50;Transporte;Gasolina;OPEX;
+9145;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 45;185,50;Transporte;Gasolina;OPEX;
+9146;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 46;185,50;Transporte;Gasolina;OPEX;
+9147;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 47;185,50;Transporte;Gasolina;OPEX;
+9148;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 48;185,50;Transporte;Gasolina;OPEX;
+9149;15/06/2025;62.025;Responsavel_A;Posto Petrobras BR Linha 1
+  Continuação da Despesa Parcela 49;185,50;Transporte;Gasolina;OPEX;
+9201;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9202;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9203;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9204;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9205;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9206;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9207;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9208;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9209;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9210;18/06/2025;62.025;Responsavel_B;Compras Diversas;R$ 254,80;Alimentacao;Mercado;OPEX;
+9301;20/06/2025;62.025;Responsavel_A;Farmacia Central;;Saude;Farmacia;BEM_ESTAR;
+9302;20/06/2025;62.025;Responsavel_A;Farmacia Central;;Saude;Farmacia;BEM_ESTAR;
+9303;20/06/2025;62.025;Responsavel_A;Farmacia Central;;Saude;Farmacia;BEM_ESTAR;
+9304;20/06/2025;62.025;Responsavel_A;Farmacia Central;;Saude;Farmacia;BEM_ESTAR;
+9305;20/06/2025;62.025;Responsavel_A;Farmacia Central;;Saude;Farmacia;BEM_ESTAR;
+9401;;62.025;Responsavel_A;Padaria Estrela;45,00;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9402;;62.025;Responsavel_A;Padaria Estrela;45,00;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9403;;62.025;Responsavel_A;Padaria Estrela;45,00;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9501;22/06/2025;62.025;Responsavel_B;;89,90;Moradia;Manutencao_Reparos;OPEX;
+9502;22/06/2025;62.025;Responsavel_B;;89,90;Moradia;Manutencao_Reparos;OPEX;
+9503;22/06/2025;62.025;Responsavel_B;;89,90;Moradia;Manutencao_Reparos;OPEX;
+9601;23/06/2025;62.025;Responsavel_A;Supermercado Big Bom;312,45;Alimentacao;Mercado;OPEX;
+9601;23/06/2025;62.025;Responsavel_A;Supermercado Big Bom;312,45;Alimentacao;Mercado;OPEX;
+9701;24/06/2025;62.025;Responsavel_A;Ifood Mega Banquete;3850,00;Alimentacao;Restaurante_Delivery;NAO_ESSENCIAL;
+9801;25/06/2025;122.026;Responsavel_B;Compra Futura Fatura;120,00;Alimentacao;Mercado;OPEX;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;

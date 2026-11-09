@@ -1,0 +1,43 @@
+# ------------------------------------------------------------------
+# Oracle Database Free (23.x) para o pipeline ETL de gastos domésticos.
+#
+# Volumes:
+#   oracle-data          -> datafiles (persistência entre restarts)
+#   ./data/inbox         -> arquivos CSV a serem ingeridos (DIRECTORY DIR_ORC_INBOX), somente leitura
+#   ./runtime/oracle_log -> LOGFILE/BADFILE das external tables (DIRECTORY DIR_ORC_LOG)
+#   ./sql e ./tests      -> scripts executados pelo sqlplus DENTRO do container
+#                           (o host do homelab não precisa de cliente Oracle)
+# ------------------------------------------------------------------
+name: orc-etl
+
+services:
+  oracle:
+    image: ${ORACLE_IMAGE:-gvenzl/oracle-free:23}
+    container_name: orc-oracle
+    restart: unless-stopped
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD:?defina ORACLE_PASSWORD no .env}
+      TZ: America/Sao_Paulo
+    ports:
+      - "${ORACLE_PORT:-1521}:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      - ./data/inbox:/opt/orc/inbox:ro
+      - ./runtime/oracle_log:/opt/orc/log
+      - ./sql:/opt/orc/sql:ro
+      - ./tests:/opt/orc/tests:ro
+    healthcheck:
+      # healthcheck.sh vem com a imagem e só retorna OK quando o PDB está aberto.
+      test: ["CMD", "healthcheck.sh"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+    # O Free é limitado a 2 CPUs / 2 GB de SGA+PGA; reservar acima disso não traz ganho.
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+
+volumes:
+  oracle-data:
